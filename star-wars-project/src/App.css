@@ -1,7 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1{
   color: white;
 }
 
+h1:hover{
+  cursor: pointer;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 6rem;
+}
+
+.background {
+  background-image: url('./img/stars.jpg');
+  background-size: contain;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.planet-image {
+  transition: transform 0.2s ease-in-out;
+}
+
 .planet-image:hover {
-  
+  transform: scale(1.1);
+}
+
+.planet-text:hover {
+  cursor:default;
+}
+
+.planet-text {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.planet-image:hover+ .planet-text {
+  opacity: 1;
 }
